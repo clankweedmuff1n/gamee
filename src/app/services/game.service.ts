@@ -43,7 +43,7 @@ export class GameService {
       }
     };
 
-    return this.http.post<any>('http://api.service.gameeapp.com', body, {headers})
+    return this.http.post<any>('https://api.service.gameeapp.com', body, {headers})
       .pipe(
         map(response => {
           console.log(response.result);
@@ -92,7 +92,7 @@ export class GameService {
   }
 
   sendScore(score: number, timePlay: number, checksum: string, token: string, gameUrl: string, gameId: string): Observable<string> {
-    const url = "http://api.service.gameeapp.com";
+    const url = "https://api.service.gameeapp.com";
     const headers = new HttpHeaders({
       'Host': 'api.service.gameeapp.com',
       'User-Agent': 'USER_AGENT',
